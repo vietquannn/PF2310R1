@@ -1,0 +1,46 @@
+- HTML - Hyper Text Markup Language - Ngôn ngữ đánh dấu siêu văn bản: không phải ngôn ngữ lập trình, chỉ giúp thay đổi định dạng hiển thị của text, trên giao diện trang web
+	- Thiết kế giao diện trang web
+	- Mô tả ý tưởng theo ý của mình mong muốn
+- Cấu trúc trang HTML:
+	+ DOCTYPE: định danh đây là 1 tài liệu HTML
+	+ head: đánh dầu phần đầu trang web, chứa các cài đặt của trang web
+		+ title: đặt tên cho trang web
+		+ meta: gắn các định dạng cấu hình cho trang web
+		+ link: gắn link các tài nguyên
+		+ script
+	+ body: đánh dâu phần thân của trang web, chứa các thẻ thành phần cấu thành nên trang web HTML
+	+ footer, section, nav,... : các thẻ thành phần khác, chia vùng trang web HTML
+
+- Sử dụng các Editor (phần mềm code) để hỗ trợ render nhanh 1 trang HTML, đồng thời viết các thành phần để hoàn thiện trang HTML đó: VSC - Visual Studio Code
+	+ cài đặt thêm extension: Live Server
+
+- 1 số thẻ thông dụng trong HTML:
++ h1->6: thẻ tạo tiêu đề, hiển thị text in đậm, thay đổi kích thước. từ h1 -> h6 sẽ nhỏ dần, h4 tương đương thẻ p
++ p: đơn thuần là tạo đoạn văn bản
++ a: thẻ gắn siêu liên kết, giúp gắn link sang trang web khác
++ img: thẻ hỗ trợ hiển thị hình ảnh theo địa chỉ
++ br: thẻ xuống dòng
++ hr: thẻ tạo đường kẻ ngang trang web
++ ul: thẻ tạo danh sách không có thứ tự
++ ol: thẻ tạo danh sách có thứ tự
++ li: thẻ thành phần của thẻ danh sách nói trên
++ form: đánh dấu giới hạn vùng biểu mẫu => tạo biểu mẫu: dùng để thu thập thông tin ng dùng nhập vào
++ input: dùng để nhập dữ liệu của người dùng
+	- text: nhập chữ
+	- number: nhập số
+	- date: dạng lịch, chọn ngày
+	- datetime: dạng lịch có thêm thời gian
+	- checkbox: ô lựa chọn nhiều
+	- radio: ô lựa chọn 1 (duy nhất)
+	- range: kéo để chọn giá trị
+	- email: định dạng text nhập vào là dạng email
+	- password: chuyển text nhập vào thành dấu chấm tròn
++ label: thẻ gắn nhãn cho thẻ thành phần khác: thường dùng cho input, select
++ select: thẻ tạo lựa chọn
++ option: các lựa chọn cho thẻ select
++ button: thẻ tạo ra các nút ấn 
++ span: đánh dấu 1 vùng văn bản muốn setup riêng
++ table: thẻ tạo bảng
+	+ tr: thẻ tạo ra các hàng trong bảng
+	+ th: thẻ tạo ra các ô tiêu đề
+	+ td: thẻ tạo ra các ô bình thường 

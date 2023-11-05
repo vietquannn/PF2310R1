@@ -1,0 +1,43 @@
+- Thuật toán: cách giải quyết 1 vấn đề với số bước hữu hạn 
+- Lập trình: ý tưởng => thiết kế => lập trình => sử dụng
+- Lập trình hiểu là giải quyết các bài toán để đưa ra các tính năng có thể sử dụng 
+=> Giải quyết bài toán bằng thuật toán
+- BT tính phương trình bậc 2:
+	+ nhập hệ số
+	+ xét điều kiện a,b,c
+	+ tính delta: b2 - 4ac
+		+ delta > 0 => 2 nghiệm phân biệt: (-b +/- căn Delta) / 2a
+		+ delta = 0 => nghiệm kép: -b/2a
+		+ delta < 0 => vô nghiệm
+	+ tính nghiệm
+	+ hiển thị nghiệm
+- 2 phương án để giải quyết 1 bài toán bằng giải thuật
+* Pseudo-code (mã giả): cách trình bày các bước giải quyết bài toán bằng ngôn ngữ thông dụng.
+thường dùng tiếng anh
+	- Ưu:
+		+ Không có quy tắc cụ thể => dễ tiếp cận, dễ nắm bắt
+		+ Ngôc ngữ gần với ngôn ngữ sử dụng thường ngày
+	- Nhược:
+		+ Đôi khi gây khó hiểu
+		+ Không thể hiện được luồng của bài toán
+		+ Khó khăn khi trao đổi thông tin  bài toán
+* Flowchart (lưu đồ): cách trình bày các bước giải quyết bài toán bằng hình vẽ cụ thể, có quy tắc
+	- Ưu:
+		+ Có quy tắc chặt chẽ, phải tuân thủ
+		+ Thể hiện luồng của bài toán cụ thể
+		+ Tường minh về ý nghĩa các bước
+	- Nhược:
+		+ Đôi khi quá chặt chẽ, gây khó hiểu
+		+ Cần phải học về các hình vẽ, quy tắc => cần ng đã học mới tiếp nhận tt được
+	- Hình vẽ:
+		+ Hình oval: thể hiện của bắt đầu / kết thúc
+		+ Hình bình hành: thể hiện của nhập / xuất dữ liệu
+		+ Hình thoi: thể hiện của rẽ nhánh, điều kiện
+		+ Hình chữ nhật: thể hiện của tính toán
+		+ Mũi tên: thể hiện của luồng đi trong chương trình
+		+ Hình tròn gắn mũi tên có hướng: dùng để nối các lưu đồ, nếu quá dài (ít dùng)
+		+ Chú thích: giải thích cho giá trị nào đó
+
+
+
+

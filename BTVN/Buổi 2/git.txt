@@ -1,0 +1,31 @@
+- Git: là ứng dụng cho phép người dùng tương tác và làm việc, lưu trữ mã nguồn
+- source: mã nguồn, mã code hoặc tài nguyên chia sẻ chung trong dự án
+
+- SMCs: Source Code Management System: hệ thống quản lý mã nguồn 
+- Phân loại:
+	+ Quản lý mã nguồn tập trung: chứa trong 1 phiên bản và 1 máy chủ duy nhất. Có sự đồng nhất về phiên bản và mã nguồn. Độ rủi ro cao, khi bị tấn công hoặc xảy ra vấn đề với máy chủ.
+	+ Quản lý mã nguồn phân tán: có nhiều phiên bản trên nhiều máy khác nhau ( máy chủ, máy thành viên ). Có sự sai khác về mã nguồn trên các máy, có thể đồng bộ. Giảm tỷ lệ mất mã nguồn do các vấn đề khách quan, ngoại vi
+- VCS: Version Control System: hệ thông quản lý phiên bản
+- Github: ứng dụng triển khai Git, hỗ trợ tốt cho người dùng, phù hợp với dự án cá nhân, dự án nhỏ. Độ bảo mật không quá cao.
+
+- Repository: bộ nhớ chứa mã nguồn
+	+ Remote: bộ nhớ online, nằm ở máy chủ Git
+	+ Local: bộ nhớ tại các máy thành phần, đang tương tác với Git
+- Version, snapshot: nói về các phiên bản mã nguồn khác nhau tồn tại dự án
+
+- Thao tác với Git:
+	+ git init: tạo local repository, quản lý các file với Git
+	+ git add: thêm các file vào phần quản lý
+		- git add <tên file>: demo.html, test.txt, index.html
+		- git add . : thêm tất cả các file trong dự án 
+	+ git commit -m "<message>": tạo ra các snapshot/version của mã nguồn
+	+ git remote add origin <url>: kết nối local với remote repository
+	+ git push origin master: đẩy các phiên bản lên remote repository
+* 1 số lệnh có chức năng đặc thù
+	+ git clone <url>: sao chép 1 remote repository về local
+	+ git pull: kéo các phiên bản từ remote về local đã kết nối
+	+ git status: kiểm tra trạng thái của các file trong dự án đang được quản lý
+	+ git remote -v: kiểm tra remote đang kết nối hiện tại với local
+- Cài đặt config lần đầu làm việc:
+	+ git config --global user.email "<email đăng ký>"
+	+ git config --global user.name "<tên git>"
