@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Structure</title>
+        <!-- Embed Bootstrap -->
+        <link rel="stylesheet"
+            href="assets/bootstrap-5.1.3/css/bootstrap.min.css">
+        <script src="assets/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+        <!-- Webpage CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Webpage JS -->
+        <script src="assets/js/main.js"></script>
+        <style>
+            th:first-child{
+                background-color: #fc0000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <!-- Navbar here -->
+        </header>
+        <main>
+            <form action="index.php" method="get">
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th colspan="4">SỞ THÍCH CỦA BẠN</th>
+                        </tr>
+                        <tr>
+                            <td><label for="name">Họ và tên</label></td>
+                            <td colspan="2"><input type="text" id="name"
+                                    name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Emai</label></td>
+                            <td colspan="2"><input type="email" id="email"
+                                    name="email"></td>
+                        </tr>
+                        <tr>
+                            <td>Sở thích</td>
+                            <td><input type="checkbox" name="tt">Thể thao</td>
+                            <td><input type="checkbox" name="an">Âm nhạc</td>
+                            <td><input type="checkbox" name="ds">Đọc sách</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="lw">Lướt web</td>
+                            <td><input type="checkbox" name="cg">Chơi game</td>
+                            <td><input type="checkbox" name="da">Điện ảnh</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="dl">Du lịch</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="sm"
+                                    value="Gửi thông tin"></td>
+                            <td><input type="reset" name="rs" value="Nhập lại"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+            <form action="index.php" method="get">
+                <fieldset>
+                    <h4>ĐĂNG KÝ HỌC VIÊN</h4>
+                    <table>
+                        <tr>
+                            <td><label for="name">Họ và tên</label></td>
+                            <td colspan="2"><input type="text" id="name" name="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="birthday">Ngày sinh</label></td>
+                            <td colspan="2"><input type="text" id="birthday" name="birthday"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Giới tính</label></td>
+                            <td><input type="radio" name="nam">Nam</td>
+                            <td><input type="radio" name="nu">Nữ</td>
+                        </tr>
+                        <tr>
+                            <td><label for="address">Địa chỉ</label></td>
+                            <td colspan="2" rowspan="4"><textarea name="address" id="address" cols="30" rows="4"></textarea></td>
+                        </tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <td><label for="class">Lớp</label></td>
+                            <td>
+                                <select name="class" id="class">
+                                    <option value="cl">Chọn lớp</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td><input type="email" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Điện thoại</label></td>
+                            <td><input type="text" id="phone" name="phone"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" name="sm" value="Đăng ký"></td>
+                            <td><input type="reset" name="rs" value="Nhập lại"></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <!-- Footer here -->
+        </footer>
+    </body>
+
+</html>
