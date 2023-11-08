@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cá Nhân</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #fff;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .avatar {
+            text-align: center;
+        }
+        .avatar img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .name {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .name h1 {
+            font-size: 24px;
+            margin: 5px 0;
+        }
+        .name .specialize {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .contact {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .contact li {
+            margin: 5px 0;
+        }
+        .contact span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 14px;
+            line-height: 20px;
+            margin-right: 5px;
+        }
+        .info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info li {
+            margin-bottom: 10px;
+        }
+        .intro {
+            margin-top: 20px;
+        }
+        .intro h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .experience {
+            margin-top: 20px;
+        }
+        .experience h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .experience .item {
+            margin-bottom: 20px;
+            border-left: 3px solid #007bff;
+            padding-left: 10px;
+        }
+        .experience h4 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .experience .time {
+            font-size: 14px;
+        }
+        .skills {
+            margin-top: 20px;
+        }
+        .skills h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills li {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .projects {
+            margin-top: 20px;
+        }
+        .projects h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .project {
+            margin-bottom: 20px;
+            border-left: 3px solid #007bff;
+            padding-left: 10px;
+        }
+        .project h4 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .project .time {
+            font-size: 14px;
+        }
+        .project .web {
+            color: #007bff;
+        }
+        .project .location {
+            font-weight: bold;
+        }
+        .project .des ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        .cv-container {
+            max-width: 100%;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .cv-main {
+            flex: 2;
+            padding: 20px;
+        }
+        .cv-sidebar {
+            flex: 1;
+            padding: 20px;
+        }
+        @media screen and (min-width: 768px) {
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="avatar">
+            <img src="./Picture/avt.jpg" alt="Avatar">
+        </div>
+        <div class="name">
+            <h1>QUAN NGUYEN</h1>
+            <div class="specialize">Front-End Developer</div>
+            <ul class="contact">
+                <li><span>P</span> 0333333333</li>
+                <li><span>E</span> @gmail.com</li>
+                <li><span>A</span> Thai Nguyen</li>
+            </ul>
+        </div>
+        <div class="info">
+            <ul>
+                <li>From <b>HN</b> - VietNam</li>
+                <li>06/04/2003</li>
+                <li>ICTU University</li>
+            </ul>
+        </div>
+        <div class="intro">
+            <h2>INTRODUCE MYSELF</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </div>
+        <div class="experience">
+            <h2>EXPERIENCE</h2>
+            <div class="item">
+                <h4>Front-End Developer</h4>
+                <div class="time">
+                    <span>2020 - 2022</span>
+                    <span>ABC D company</span>
+                </div>
+                <div class="des">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</p>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>Javascript</li>
+                <li>PHP</li>
+                <li>MySql</li>
+                <li>Git</li>
+            </ul>
+        </div>
+        <div class="projects">
+            <h2>PROJECTS</h2>
+            <div class="project">
+                <h4>Website shopping</h4>
+                <div class="web">www.123456.com</div>
+                <div class="location">Front-End Developer</div>
+                <div class="des">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                    <ul>
+                        <li>Lorem ipsum dolordolores.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit...</li>
+                        <li>Lorem ipsum dolor sit amet consectetur dolores.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
