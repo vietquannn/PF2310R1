@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var SoTienVay = parseFloat(prompt("Nhập vào số tiền vay:"))
+    var LaiSuat = parseFloat(prompt("Nhập vào số lãi suất:"))
+    var SoNam = parseFloat(prompt("Nhập vào số năm vay:"))
+
+    var Tien = SoTienVay+(LaiSuat*SoNam*SoTienVay)/100
+
+    console.log("Số tiền cả gốc lẫn lãi sau "+SoNam+" năm vay là: "+Tien)
+</script>
+</html>
