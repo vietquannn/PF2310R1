@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">Bai1</button>
+    <h1 id="result1"></h1>
+    <button onclick="m2()">Bai2</button>
+    <h1 id="result2"></h1>
+    <button onclick="m3()">Bai3</button>
+    <h1 id="result3"></h1>
+</body>
+<script>
+    //bài 1
+    function m1() {
+        let day = prompt("Nhập vào ngày cần hiển thị: ")
+        let month = prompt("Nhập vào tháng cần hiển thị: ")
+        let year = prompt("Nhập vào năm cần hiển thị: ")
+        let format = prompt("Nhập vào định dạng bạn muốn hiển thị: ")
+        let result = day + format + month + format + year
+        document.getElementById("result1").innerText = "Ngày tháng năm là: " + result
+    }
+
+    //bài 2
+    function m2() {
+        let radius = +prompt("Nhập vào bán kính hình tròn: ")
+        // Math là 1 lớp có sẵn trong Javascript
+        // Math.PI sẽ trả về gia trị nguyên bản của số PI
+        let S = radius * radius * Math.PI
+        let C = 2 * radius * Math.PI
+        document.getElementById("result2").innerHTML = "Chu vi hình tròn là: " + C.toFixed(3) +
+                                                    "<br>Diện tích hình tròn là: " + S.toFixed(3)
+        // hàm toFixed(): dùng để xác định số lượng số thập phân cần lấy sau dấu phẩy
+    }
+
+    //bài 3
+    function m3() {
+        let money = parseInt(prompt("Nhập vào số tiền cần tính lãi: "))
+        let laiSuat = parseFloat(prompt("Nhập vào lãi suất để tính: "))
+        let year = Number(prompt("Nhập vào số năm để tính: "))
+        let result = ((money * laiSuat / 100) * year) + money
+        document.getElementById("result3").innerText = "Số tiền cần trả là: " + result
+    }
+</script>
+</html>
