@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="HoaQua">
+    <button onclick="XemGia()">Xem Giá</button>
+    <p id="HienThi"></p>
+</body>
+<script>
+    function XemGia(){
+        let HoaQua = document.getElementById("HoaQua").value
+        switch(HoaQua){
+            case "Ổi":
+                document.getElementById("HienThi").innerText = "20000 VNĐ/Kg"
+                break
+            case "Dưa Hấu":
+                document.getElementById("HienThi").innerText = "20000 VNĐ/Kg"
+                break
+            case "Táo":
+                document.getElementById("HienThi").innerText = "30000 VNĐ/Kg"
+                break
+            case "Xoài":
+                document.getElementById("HienThi").innerText = "30000 VNĐ/Kg"
+                break
+            case "Cam":
+                document.getElementById("HienThi").innerText = "40000 VNĐ/Kg"
+                break
+            case "Chôm Chôm":
+                document.getElementById("HienThi").innerText = "40000 VNĐ/Kg"
+                break
+            case "Măng Cụt":
+                document.getElementById("HienThi").innerText = "50000 VNĐ/Kg"
+                break
+            default:
+            document.getElementById("HienThi").innerText = "Chưa có giá hoa quả mà bạn muốn"
+
+        }
+    }
+</script>
+</html>

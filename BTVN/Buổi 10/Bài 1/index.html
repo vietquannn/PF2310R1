@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Chuyển đổi tiền tệ</h3>
+    <table width="550">
+        <tr width="25%">
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="tien">
+            </td>
+            <td>
+                <select id="FromCurrency">
+                    <option value="VietNam">Việt Nam</option>
+                    <option value="TrungQuoc">Trung Quốc</option>
+                    <option value="NhatBan">Nhật Bản</option>
+                </select>
+            </td>
+            <td>
+                <select id="ToCurrency">
+                    <option value="VND">VNĐ</option>
+                    <option value="Yen">Yên</option>
+                    <option value="Te">Tệ</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="QuyDoi()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="in"></p>
+</body>
+<script>
+    function QuyDoi(){
+        let tien = +document.getElementById("tien").value
+        let FromCurrency = document.getElementById("FromCurrency").value
+        let ToCurrency = document.getElementById("ToCurrency").value
+        let quyDoi = 0
+        if(FromCurrency == "VietNam" && ToCurrency == "Yen"){
+            quyDoi = tien * 0.0061
+        }
+        else if(FromCurrency == "VietNam" && ToCurrency == "VND"){
+            quyDoi = tien * 1
+        }
+        else if(FromCurrency == "VietNam" && ToCurrency == "Te"){
+            quyDoi = tien * 0.0002828054298642534
+        }
+        else if(FromCurrency == "VietNam" && ToCurrency == "USD"){
+            quyDoi = tien * 0.000041
+        }
+        else if(FromCurrency == "TrungQuoc" && ToCurrency == "Yen"){
+            quyDoi = tien * 15.6
+        }
+        else if(FromCurrency == "TrungQuoc" && ToCurrency == "VND"){
+            quyDoi = tien * 3300
+        }
+        else if(FromCurrency == "TrungQuoc" && ToCurrency == "Te"){
+            quyDoi = tien * 1
+        }
+        else if(FromCurrency == "TrungQuoc" && ToCurrency == "USD"){
+            quyDoi = tien * 0.13979
+        }
+        else if(FromCurrency == "NhatBan" && ToCurrency == "Yen"){
+            quyDoi = tien * 1
+        }
+        else if(FromCurrency == "NhatBan" && ToCurrency == "VND"){
+            quyDoi = tien * 162.6
+        }
+        else if(FromCurrency == "NhatBan" && ToCurrency == "Te"){
+            quyDoi = tien * 0.05
+        }
+        else if(FromCurrency == "NhatBan" && ToCurrency == "USD"){
+            quyDoi = tien * 0.01
+        }
+        document.getElementById("in").innerText = quyDoi
+    }
+</script>
+</html>

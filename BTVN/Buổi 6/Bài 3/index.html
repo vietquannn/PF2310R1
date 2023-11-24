@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="m1()">Bấm để nhập</button>
+    <p id="result0"></p>
+    <p id="result1"></p>
+    <p id="result2"></p>
+</body>
+<script>
+    function m1() {
+        let N = prompt("Nhập vào 1 số: ")
+        let CanN = Math.sqrt(N)
+        let NBinh = N*N
+        let M = N**N
+        document.getElementById("result0").innerText = "Căn bậc 2 của " + N + " là: " + CanN
+        document.getElementById("result1").innerText = "Bình phương của " + N + " là: "+ NBinh
+        document.getElementById("result2").innerText = "Lũy thừa với số mũ là " + N + " là: "+ M
+    }
+</script>
+</html>

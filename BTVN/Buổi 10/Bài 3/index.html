@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập cân nặng của bạn: (Tính theo kg)</p>
+    <input type="text" id="CanNang">
+    <p>Nhập chiều cao của bạn: (Tính theo m)</p>
+    <input type="text" id="ChieuCao">
+    <br><br>
+    <button onclick="BMI()">Bấm vào đây!</button>
+    <p id="HienThi"></p>
+</body>
+<script>
+    function BMI(){
+        let CanNang = +document.getElementById("CanNang").value
+        let ChieuCao = +document.getElementById("ChieuCao").value
+        
+        let BMI = CanNang / ChieuCao / ChieuCao
+
+        if(BMI < 16){
+            document.getElementById("HienThi").innerText = "Bạn gầy độ III"
+        }
+        else if(BMI < 17){
+            document.getElementById("HienThi").innerText = "Bạn gầy độ II"
+        }
+        else if(BMI < 18.5){
+            document.getElementById("HienThi").innerText = "Bạn gầy độ I"
+        }
+        else if(BMI < 30){
+            document.getElementById("HienThi").innerText = "Bạn bình thường"
+        }
+        else if(BMI < 35){
+            document.getElementById("HienThi").innerText = "Bạn béo phì độ I"
+        }
+        else if(BMI < 40){
+            document.getElementById("HienThi").innerText = "Bạn béo phì độ II"
+        }
+        else {
+            document.getElementById("HienThi").innerText = "Bạn béo phì độ III"
+        }
+    }
+</script>
+</html>

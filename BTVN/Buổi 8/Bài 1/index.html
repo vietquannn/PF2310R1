@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <br><br>
+    <button onclick="addition()">Addition(+)</button>
+    <button onclick="subtraction()">Subtraction(-)</button>
+    <button onclick="multiplication()">Multiplication(X)</button>
+    <button onclick="division()">Divission(/)</button>
+    <p id="tong"></p>
+</body>
+<script>
+    function addition(){
+        let x = +document.getElementById("num1").value
+        let y = +document.getElementById("num2").value
+        let z = x + y
+        document.getElementById("tong").innerText = "Result Addition: " + z
+    }
+    function subtraction(){
+        let x = +document.getElementById("num1").value
+        let y = +document.getElementById("num2").value
+        let z = x - y
+        document.getElementById("tong").innerText = "Result Subtraction: " + z
+    }
+    function multiplication(){
+        let x = +document.getElementById("num1").value
+        let y = +document.getElementById("num2").value
+        let z = x * y
+        document.getElementById("tong").innerText = "Result Multiplication: " + z
+    }
+    function division(){
+        let x = +document.getElementById("num1").value
+        let y = +document.getElementById("num2").value
+        let z = x / y
+        document.getElementById("tong").innerText = "Result Divission: " + z
+    }
+</script>
+</html>

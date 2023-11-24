@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+</head>
+<body>
+
+<button onclick="startGame()">Bắt đầu</button>
+<p id="targetNumber"></p>
+<button onclick="guessHigher()">Trên</button>
+<button onclick="guessLower()">Dưới</button>
+<p id="result"></p>
+
+<script>
+var targetNumber;
+
+function startGame() {
+  // Random số từ 1 đến 10
+  targetNumber = Math.floor(Math.random() * 10) + 1;
+
+  // Hiển thị số random trên màn hình
+  document.getElementById("targetNumber").innerHTML = "Số random: " + targetNumber;
+
+  // Xóa kết quả trước đó
+  document.getElementById("result").innerHTML = "";
+}
+
+function guessHigher() {
+  var guess = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("targetNumber").innerHTML = "Số random: " + guess;
+  
+  if (guess > targetNumber) {
+    document.getElementById("result").innerHTML = "Chúc mừng! Bạn đã thắng.";
+  } else {
+    document.getElementById("result").innerHTML = "Rất tiếc! Bạn đã thua. Số đúng là: " + targetNumber;
+    startGame(); // Bắt đầu trò chơi mới khi thua
+  }
+}
+
+function guessLower() {
+  var guess = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("targetNumber").innerHTML = "Số random: " + guess;
+
+  if (guess < targetNumber) {
+    document.getElementById("result").innerHTML = "Chúc mừng! Bạn đã thắng.";
+  } else {
+    document.getElementById("result").innerHTML = "Rất tiếc! Bạn đã thua. Số đúng là: " + targetNumber;
+    startGame(); // Bắt đầu trò chơi mới khi thua
+  }
+}
+</script>
+
+</body>
+</html>

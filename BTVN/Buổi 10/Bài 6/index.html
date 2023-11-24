@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tính điểm ĐH khối D</h3>
+    <p>Môn Toán</p>
+    <input type="text" id="toan">
+    <p>Môn Văn</p>
+    <input type="text" id="van">
+    <p>Môn Anh</p>
+    <input type="text" id="anh">
+    <p>Khu vực</p>
+    <select id="KhuVuc">
+        <option value="KV1">KV1</option>
+        <option value="KV2">KV2</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <br><br>
+    <button onclick="TinhDiem()">Tính điểm</button>
+    <p id="HienThi" style="color: red;"></p>
+</body>
+<script>
+    function TinhDiem(){
+        let toan = +document.getElementById("toan").value
+        let van = +document.getElementById("van").value
+        let anh = +document.getElementById("anh").value
+        let KhuVuc = document.getElementById("KhuVuc").value
+        let TongDiem = 0
+        switch(KhuVuc){
+            case "KV1":
+                TongDiem = toan + van + anh + 0.75
+                break
+            case "KV2-NT":
+                TongDiem = toan + van + anh + 0.5
+                break
+            case "KV2":
+                TongDiem = toan + van + anh + 0.25
+                break
+            case "KV3":
+                TongDiem = toan + van + anh
+        }
+        document.getElementById("HienThi").innerHTML = "Tổng điểm ĐH khối D của bạn là: " + TongDiem
+    }
+</script>
+</html>
