@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập vào số nguyên:</p>
+    <input type="text" id="Nhap">
+    <button onclick="HienThi()">Hiển thị</button>
+    
+    <p id="KetQua"></p>
+
+    <script>
+        function Fibonacci(n){
+            let Fibonacci = []
+            for(let i = 0; i < n; i++){
+                if( i === 0 ){
+                    Fibonacci.push(1);
+                } else if (i === 1) {
+                    Fibonacci.push(1);
+                } else {
+                    Fibonacci.push(Fibonacci[i-1] + Fibonacci[i-2]);
+                }
+            }
+            return Fibonacci
+        }
+
+        function HienThi(){
+            var n = +document.getElementById("Nhap").value
+            let result = Fibonacci(n)
+            document.getElementById("KetQua").innerHTML = "Dãy Fibonacci: " + result.join(', ');
+        }
+    </script>
+</body>
+</html>

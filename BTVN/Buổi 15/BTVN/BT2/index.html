@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function chenDauGachGiuaSoChan(inputNumber) {
+    var inputString = inputNumber.toString()
+    var ketQua = ""
+
+    for (var i = 0; i < inputString.length; i++) {
+        var soHienTai = parseInt(inputString[i])
+        var soTiepTheo = parseInt(inputString[i + 1])
+        ketQua += soHienTai
+        if (soHienTai % 2 === 0 && soTiepTheo % 2 === 0 && soTiepTheo !== undefined) {
+            ketQua += '-'
+        }
+    }
+
+    console.log(ketQua)
+    }
+
+    var soNhap = prompt("Nhập số: ")
+    chenDauGachGiuaSoChan(soNhap)
+</script>
+</html>

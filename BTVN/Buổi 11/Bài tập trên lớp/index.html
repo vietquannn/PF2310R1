@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>Nhập vào số tiền</p>
+            </td>
+            <td>
+                <input type="text" id="SoTienGui">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Nhập vào số tháng</p>
+            </td>
+            <td>
+                <input type="text" id="SoThang">
+            </td>
+        </tr>
+    </table>
+    <button onclick="LaiThuong()">Lãi bình thường</button>
+    <button onclick="LaiKep()">Lãi kép</button>
+    <p id="LaiThuong" style="color: blue;"></p>
+    <p id="LaiKep" style="color: blue;"></p>
+</body>
+<script>
+    function LaiThuong(){
+        let SoTienGui = +document.getElementById("SoTienGui").value
+        let SoThang = +document.getElementById("SoThang").value
+        let LaiSuat
+        if(SoThang < 12){
+            LaiSuat = 0.065
+        } else if(SoThang < 24){
+            LaiSuat = 0.08
+        } else{
+            LaiSuat = 0.0965
+        }
+        let SoTienNhanDuoc = SoTienGui + LaiSuat*SoThang*SoTienGui
+        let SoTienLai = SoTienNhanDuoc - SoTienGui
+        document.getElementById("LaiThuong").innerText = "Số tiền nhận được là: " + SoTienNhanDuoc + "\nSố tiền lãi là: " + SoTienLai 
+    }
+    function LaiKep(){
+        let SoTienGui = +document.getElementById("SoTienGui").value
+        let SoTienGui1 = SoTienGui
+        let SoThang = +document.getElementById("SoThang").value
+        let LaiSuat
+        if(SoThang < 12){
+            LaiSuat = 0.065
+        } else if(SoThang < 24){
+            LaiSuat = 0.08
+        } else{
+            LaiSuat = 0.0965
+        }
+        for(let i = 0; i < SoThang; i++){
+            SoTienGui = SoTienGui + LaiSuat*SoTienGui
+        }
+        let SoTienLai = SoTienGui - SoTienGui1
+        document.getElementById("LaiThuong").innerText = "Số tiền nhận được là: " + SoTienGui + "\nSố tiền lãi là: " + SoTienLai 
+    }
+</script>
+</html>

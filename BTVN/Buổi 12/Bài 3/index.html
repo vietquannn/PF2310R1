@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập vào số nguyên a</p>
+    <input type="text" id="NhapA">
+    <p>Nhập vào số nguyên b</p>
+    <input type="text" id="NhapB">
+    <br><br>
+    <button onclick="TinhTong()">Tổng các số trong khoảng từ a đến b</button>
+
+    <p id="KetQua"></p>
+</body>
+<script>
+    function TinhTong(){
+        var a = +document.getElementById("NhapA").value
+        var b = +document.getElementById("NhapB").value
+        var tong = 0
+        if(a < b){
+            for(var i = a ; i <= b ; i++){
+                tong = tong + i
+            }
+        } else{
+            document.getElementById("KetQua").innerHTML = "Vui lòng nhập a < b" 
+            return
+        }
+        document.getElementById("KetQua").innerHTML = "Tổng các số từ " + a + " đến " + b + " là: " + tong
+    }
+</script>
+</html>

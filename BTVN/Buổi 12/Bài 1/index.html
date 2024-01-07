@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="BatDau()">Chơi</button>
+</body>
+<script>
+    function BatDau() {
+        var NhapN = +prompt("Nhập vào số lớn nhất để đoán");
+
+        if (isNaN(NhapN) || NhapN <= 0) {
+            alert("Vui lòng nhập một số lớn hơn 0.");
+            return;
+        }
+
+        var randomNumber = Math.floor(Math.random() * NhapN) + 1;
+
+        for (var i = 0; i < 3; i++) {
+            var Doan = +prompt("Lượt " + (i + 1) + ": Đoán một số từ 1 đến " + NhapN);
+            if (isNaN(Doan) || Doan <= 0 || Doan > NhapN) {
+                alert("Vui lòng nhập một số hợp lệ.");
+                i--;
+                continue;
+            }
+
+            if (Doan === randomNumber) {
+                alert("Chúc mừng! Bạn đã đoán đúng!");
+                break;
+            } else {
+                if (i < 2) {
+                    var message = Doan > randomNumber
+                        ? "Số bạn đoán lớn hơn số cần đoán. Bạn còn " + (2 - i) + " lượt."
+                        : "Số bạn đoán bé hơn số cần đoán. Bạn còn " + (2 - i) + " lượt.";
+                    alert(message);
+                } else {
+                    alert("Rất tiếc! Bạn đã hết số lượt chơi. Số đúng là: " + randomNumber);
+                }
+            }
+        }
+    }
+</script>
+</html>

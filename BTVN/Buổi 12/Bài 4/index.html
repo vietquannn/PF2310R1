@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhập vào một số nguyên:</p>
+    <input type="text" id="NhapSo">
+    <br><br>
+    <button onclick="KiemTraSoNguyenTo()">Kiểm tra số nguyên tố</button>
+
+    <p id="KetQua"></p>
+
+    <script>
+        function KiemTraSoNguyenTo() {
+            var num = +document.getElementById("NhapSo").value;
+            var SNTResult = SNT(num);
+
+            if (SNTResult) {
+                document.getElementById("KetQua").innerHTML = num + " là số nguyên tố.";
+            } else {
+                document.getElementById("KetQua").innerHTML = num + " không là số nguyên tố.";
+            }
+        }
+
+        function SNT(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+
+            if (num % 2 === 0 || num % 3 === 0) return false;
+
+            for (var i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

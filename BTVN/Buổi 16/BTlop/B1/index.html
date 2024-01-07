@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var Arr = []
+    for (var i = 0; i < 10; i++) {
+        var Input = prompt("Nhập giá trị cho phần tử thứ " + (i + 1))
+        var num = parseInt(Input)
+        if (!isNaN(num)) {
+            Arr[i] = num
+        } else {
+            console.log("Giá trị không hợp lệ. Nhập lại.")
+            i--
+        }
+    }
+    console.log("Mảng đã nhập: ")
+    for(var i = 0; i < Arr.length; i++) {
+        console.log(Arr[i])
+    }
+    
+    console.log("Các phần tử là số nguyên tố: ")
+    for (var i = 0; i < 10; i++) {
+        if (KT_SNT(Arr[i])) {
+            console.log(Arr[i])
+        }
+    }
+    function KT_SNT(number) {
+        if (number <= 1) {
+            return false
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false
+            }
+        }
+        return true
+    }
+</script>
+</html>

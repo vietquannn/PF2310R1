@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        #editForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quản lý sản phẩm</h1>
+    </header>
+    <main>
+        <h2>Danh sách sản phẩm</h2>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Số thứ tự</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <form id="addForm">
+            <label for="productName">Tên sản phẩm:</label>
+            <input type="text" id="productName" required>
+            <button type="button" onclick="addProduct()">Thêm</button>
+        </form>
+
+        <form id="editForm">
+            <label for="editProductName">Sửa tên sản phẩm:</label>
+            <input type="text" id="editProductName" required>
+            <button type="button" onclick="applyEdit()">Sửa</button>
+        </form>
+    </main>
+
+    <script>
+        let productList = ["Nguyễn", "Việt", "Quân"];
+        let editingIndex = -1;
+
+        function displayProductList() {
+            let tableBody = document.getElementById("productTable").getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
+
+            for (let i = 0; i < productList.length; i++) {
+                let row = tableBody.insertRow(i);
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+
+                cell1.innerHTML = i + 1;
+                cell2.innerHTML = productList[i];
+
+                let editButton = document.createElement("button");
+                editButton.textContent = "Sửa";
+                editButton.onclick = function () {
+                    showEditForm(i);
+                };
+                cell3.appendChild(editButton);
+
+                let space = document.createTextNode(" ");
+                cell3.appendChild(space);
+
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "Xoá";
+                deleteButton.onclick = function () {
+                    deleteProduct(i);
+                };
+                cell3.appendChild(deleteButton);
+            }
+        }
+
+        function addProduct() {
+            let productName = document.getElementById("productName").value;
+            productList.push(productName);
+            displayProductList();
+            alert(`Đã thêm sản phẩm: ${productName}`);
+            document.getElementById("productName").value = '';
+        }
+
+        function showEditForm(index) {
+            editingIndex = index;
+            document.getElementById("editProductName").value = productList[index];
+            document.getElementById("editForm").style.display = "block";
+        }
+
+        function applyEdit() {
+            let editedProductName = document.getElementById("editProductName").value;
+
+            if (editingIndex !== -1) {
+                productList[editingIndex] = editedProductName;
+                displayProductList();
+                alert(`Đã sửa tên sản phẩm thành: ${editedProductName}`);
+                document.getElementById("editProductName").value = '';
+                document.getElementById("editForm").style.display = "none";
+                editingIndex = -1;
+            }
+        }
+
+        function deleteProduct(index) {
+            let deletedProduct = productList[index];
+            productList.splice(index, 1);
+            displayProductList();
+            alert(`Đã xoá sản phẩm: ${deletedProduct}`);
+        }
+
+        displayProductList();
+    </script>
+</body>
+</html>
